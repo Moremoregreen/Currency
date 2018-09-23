@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 Double NTDIn = Double.parseDouble(ntd.getText().toString().trim());
                 if (NTDIn.equals("")){
                     new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Problem")
-                            .setMessage("Please enter your NTD amount")
+                            .setTitle(R.string.problem)
+                            .setMessage(R.string.please_enter_ntd)
                             .setPositiveButton("OK",null)
                             .show();
                 }else {
@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 //                    double usResult = NTDIn / usRate;
 //                    double jpResult = NTDIn / jpRate;
                     new AlertDialog.Builder(MainActivity.this)
-                            .setTitle("Result")
-                            .setMessage("USD is "+usResult +"\n" + "JP    is " + jpResult)
-                            .setPositiveButton("OK",null)
+                            .setTitle(R.string.result)
+                            .setMessage(getString(R.string.usd_is)+usResult +"\n" + getString(R.string.jp_is) + jpResult)
+                            .setPositiveButton(R.string.ok,null)
                             .show();
                 }
             }
